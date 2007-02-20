@@ -1,0 +1,21 @@
+--- gmpc-lastfm-0.14.0/src/Makefile.am.wig	2006-10-31 13:32:19.000000000 +0100
++++ gmpc-lastfm-0.14.0/src/Makefile.am	2007-02-20 16:53:45.000000000 +0100
+@@ -1,6 +1,6 @@
+-libdir=${prefix}/share/gmpc/plugins/
++pluginsdir=$(libdir)/gmpc/
+ 
+-lib_LTLIBRARIES = lastfmplugin.la
++plugins_LTLIBRARIES = lastfmplugin.la
+ 
+ lastfmplugin_la_SOURCES=	\
+ 	plugin.c 
+@@ -9,9 +9,3 @@
+ lastfmplugin_la_LIBADD= @gmpclastfm_LIBS@ 
+ lastfmplugin_la_CFLAGS= @gmpclastfm_CFLAGS@  
+ lastfmplugin_la_LDFLAGS= -module -avoid-version 
+-
+-install: 
+-	@$(MAKE)
+-	mkdir -p ${DESTDIR}${libdir}
+-	if test -f .libs/lastfmplugin.so; then cp .libs/lastfmplugin.so ${DESTDIR}${libdir}; fi
+-	if test -f .libs/lastfmplugin.dll; then cp .libs/lastfmplugin.dll ${DESTDIR}${libdir}; fi

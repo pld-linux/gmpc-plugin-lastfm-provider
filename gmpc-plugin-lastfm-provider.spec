@@ -20,13 +20,14 @@ BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The last.fm plugin can fetch artist images, from last.fm. This plugin doesn't
-scrobble your music, use a dedicated client like mpdscribble for this.
+The last.fm plugin can fetch artist images, from last.fm. This plugin
+doesn't scrobble your music, use a dedicated client like mpdscribble
+for this.
 
 %description -l pl.UTF-8
-Ta wtyczka pobiera obrazy oraz informacje o artyście z Last.fm. Nie wysyła ona
-informacji o odtwarzanych utworach. W tym celu należy skorzystać z dedykowanego
-klienta jak mpdscribble.
+Ta wtyczka pobiera obrazy oraz informacje o artyście z Last.fm. Nie
+wysyła ona informacji o odtwarzanych utworach. W tym celu należy
+skorzystać z dedykowanego klienta jak mpdscribble.
 
 %prep
 %setup -qn %{source_name}-%{version}

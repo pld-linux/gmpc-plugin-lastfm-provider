@@ -1,22 +1,22 @@
-%define		source_name gmpc-last.fm
+%define		source_name gmpc-last-fm
 Summary:	Last.fm provider plugin for Gnome Music Player Client
 Summary(pl.UTF-8):	Wtyczka udostępniająca dane z Last.fm dla odtwarzacza Gnome Music Player Client
 Name:		gmpc-plugin-lastfm-provider
-Version:	0.16.1
+Version:	0.16.96
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
-Source0:	http://download.sarine.nl/Programs/gmpc/0.16.1/gmpc-last.fm-%{version}.tar.gz
-# Source0-md5:	f0d877ffcc49b0475254d4002bffd0da
+Source0:	http://dl.sourceforge.net/musicpd/%{source_name}-%{version}.tar.gz
+# Source0-md5:	b9a3774258765711a3e4c2b23c7e2de6
 URL:		http://sarine.nl/gmpc-plugins-lastfm
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gmpc-devel >= 0.16.0
+BuildRequires:	gmpc-devel >= 0.16.96
 BuildRequires:	gtk+2-devel >= 2:2.4
 BuildRequires:	libglade2-devel
-BuildRequires:	libmpd-devel >= 0.16.0
+BuildRequires:	libmpd-devel >= 0.16.96
 BuildRequires:	libtool
-Requires:	gmpc >= 0.16.0
+Requires:	gmpc >= 0.16.96
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

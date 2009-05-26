@@ -16,6 +16,7 @@ BuildRequires:	gtk+2-devel >= 2:2.4
 BuildRequires:	libglade2-devel
 BuildRequires:	libmpd-devel >= 0.18.0
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 Requires:	gmpc >= 0.17.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

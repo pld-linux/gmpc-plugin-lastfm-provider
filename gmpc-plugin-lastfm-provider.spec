@@ -2,19 +2,19 @@
 Summary:	Last.fm provider plugin for Gnome Music Player Client
 Summary(pl.UTF-8):	Wtyczka udostępniająca dane z Last.fm dla odtwarzacza Gnome Music Player Client
 Name:		gmpc-plugin-lastfm-provider
-Version:	0.18.0
+Version:	0.18.100
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/musicpd/%{source_name}-%{version}.tar.gz
-# Source0-md5:	80229e4ff801f2fa001c056c4cf02738
-URL:		http://sarine.nl/gmpc-plugins-lastfm
+# Source0-md5:	350026a511d35431fc628998cdb68c6a
+URL:		http://gmpc.wikia.com/wiki/GMPC_PLUGIN_LASTFM
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gmpc-devel >= 0.18.0
+BuildRequires:	gmpc-devel >= 0.18.100
 BuildRequires:	gtk+2-devel >= 2:2.4
 BuildRequires:	libglade2-devel
-BuildRequires:	libmpd-devel >= 0.18.0
+BuildRequires:	libmpd-devel >= 0.18.100
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 Requires:	gmpc >= 0.17.0
@@ -50,11 +50,13 @@ install -d $RPM_BUILD_ROOT%{_libdir}/gmpc
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name} --all-name
+
 rm $RPM_BUILD_ROOT%{_libdir}/gmpc/plugins/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/gmpc/plugins/*.so

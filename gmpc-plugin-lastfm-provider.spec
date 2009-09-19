@@ -7,7 +7,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/musicpd/%{source_name}-%{version}.tar.gz
-# Source0-md5:	350026a511d35431fc628998cdb68c6a
+# Source0-md5:	51d7bf7397c15a3272271d8d4c493b09
 URL:		http://gmpc.wikia.com/wiki/GMPC_PLUGIN_LASTFM
 BuildRequires:	autoconf
 BuildRequires:	automake
